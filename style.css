@@ -3,7 +3,7 @@ html,body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #15532e;
+    background-color: #027b42;
     font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
     overflow: hidden;
     user-select: none;
@@ -30,7 +30,6 @@ html,body {
     height: 100%;
     padding: 16px 0;
     gap: 16px;
-    background-color: #15532e;
     box-sizing: border-box;
 }
 
