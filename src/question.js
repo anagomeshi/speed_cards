@@ -45,6 +45,8 @@ function generateQuestion(){
     }
 
     cardSliderItemWidth = cardSlider.querySelectorAll('li')[0].offsetWidth;
+
+    cardIndex.innerText = `1/${cardNumber}`;
 }
 
 generateQuestion();
