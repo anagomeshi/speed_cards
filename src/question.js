@@ -7,8 +7,11 @@ const cardArray = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 
 let cardNumber = 52;
 let cardSliderItemWidth = 0;
 
-const shuffleArray = (array) => {
-    return array.toSorted(() => Math.random() - Math.random())
+function shuffleArray(array){
+    for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1)); // 0 から i のランダムなインデックス
+    [array[i], array[j]] = [array[j], array[i]]; // 要素を入れ替えます
+  }
 }
 
 function generateQuestion(){
