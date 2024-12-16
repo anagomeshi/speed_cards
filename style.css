@@ -9,7 +9,7 @@ html,body {
     user-select: none;
     -webkit-user-select: none;
     box-sizing: border-box;
-  }
+}
   
 @supports(padding: env(safe-area-inset-left)) {
     body {
