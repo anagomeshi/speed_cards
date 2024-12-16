@@ -12,6 +12,8 @@ function shuffleArray(array){
       let j = Math.floor(Math.random() * (i + 1)); // 0 から i のランダムなインデックス
       [array[i], array[j]] = [array[j], array[i]]; // 要素を入れ替えます
     }
+
+    return array;
 }
 
 function generateQuestion(){
