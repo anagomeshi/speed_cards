@@ -33,6 +33,10 @@ html,body {
     box-sizing: border-box;
 }
 
+.app-chrome img{
+    pointer-events: none;
+}
+
 .app-chrome ::-webkit-scrollbar{
     display: none;
 }
