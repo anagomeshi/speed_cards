@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>スピードカード</title>
   <link href="./style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- <link rel="manifest" href="./manifest.json"> -->
 </head>
 
@@ -27,15 +28,16 @@
     <div class="app-content">
       <div class="content content-question content-show">
         <div class="card-list"></div>
-        <div class="pickup-area">
-          <!-- <span class="current-card">27/52</span> -->
-          <ul class="card-slider"></ul>
+        <div class="swiper pickup-area">
+          <div class="swiper-wrapper"></div>
         </div>
       </div>
       <div class="content content-answer"></div>
     </div>
   </div>
-  <script type="text/javascript" src="src/cards.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="src/cards.js"></script>
+  <!-- <script type="text/javascript" src="src/cards.js"></script> -->
   <!-- <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
