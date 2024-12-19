@@ -3,7 +3,6 @@ html,body {
   width: 100%;
   margin: 0;
   padding: 0;
-  /* background-color: #027b42; */
   background-color: #188653;
   font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
   overflow: hidden;
@@ -132,7 +131,6 @@ html,body {
 }
 
 .card{
-  /* border: 1px solid #000000; */
   box-sizing: border-box;
 }
 
