@@ -5,10 +5,10 @@ const cardArray = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 
 
 let cardNumber = 52;
 
-const swiper = new Swiper(".pickup-area", {
+const cardSlider = new Swiper(".card-slider", {
     on: {
         slideChange: function () {
-            cardIndex.innerText = `${swiper.realIndex + 1}/${cardNumber}`;
+            cardIndex.innerText = `${cardSlider.realIndex + 1}/${cardNumber}`;
         }
       }
 });
@@ -26,7 +26,7 @@ function generateQuestion(){
     const questionArray = shuffleArray([...cardArray]);
 
     cardList.innerHTML = '';
-    swiper.removeAllSlides();
+    cardSlider.removeAllSlides();
 
     for(let i = 0; i < cardNumber; i++){
         const newCardContainer = document.createElement('div');
@@ -44,7 +44,7 @@ function generateQuestion(){
         newCardContainer.appendChild(newCardContainerImg);
         cardList.appendChild(newCardContainer);
 
-        swiper.appendSlide(`<div class="swiper-slide"><img class="card" src="icons/cards/${questionArray[i]}.svg" alt=""></div>`);
+        cardSlider.appendSlide(`<div class="swiper-slide"><img class="card" src="icons/cards/${questionArray[i]}.svg" alt=""></div>`);
     }
 
     cardIndex.innerText = `1/${cardNumber}`;
