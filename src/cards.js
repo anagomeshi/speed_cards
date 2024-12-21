@@ -6,11 +6,12 @@ const cardArray = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'C9', 'C10', 
 let cardNumber = 52;
 
 const cardSlider = new Swiper(".card-slider", {
+    slidesPerView: 1,
     on: {
         slideChange: function () {
             cardIndex.innerText = `${cardSlider.realIndex + 1}/${cardNumber}`;
         }
-      }
+    }
 });
 
 function shuffleArray(array){
@@ -44,7 +45,7 @@ function generateQuestion(){
         newCardContainer.appendChild(newCardContainerImg);
         cardList.appendChild(newCardContainer);
 
-        cardSlider.appendSlide(`<div class="swiper-slide"><img class="card" src="icons/cards/${questionArray[i]}.svg" alt=""></div>`);
+        cardSlider.appendSlide(`<div class="swiper-slide"><img class="card" src="icons/cards/${questionArray[i]}.svg" alt="" draggable="false"></div>`);
     }
 
     cardIndex.innerText = `1/${cardNumber}`;
