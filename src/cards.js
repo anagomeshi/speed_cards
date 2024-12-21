@@ -7,11 +7,14 @@ let cardNumber = 4;
 
 const cardSlider = new Swiper(".card-slider", {
     slidesPerView: 1,
+    virtual: {
+        slides: [],
+    },
     on: {
         slideChange: function () {
             cardIndex.innerText = `${cardSlider.realIndex + 1}/${cardNumber}`;
         }
-    }
+    },
 });
 
 function shuffleArray(array){
@@ -27,7 +30,8 @@ function generateQuestion(){
     const questionArray = shuffleArray([...cardArray]);
 
     cardList.innerHTML = '';
-    cardSlider.removeAllSlides();
+    cardSlider.virtual.slides = [];
+    cardSlider.virtual.update(true);
 
     for(let i = 0; i < cardNumber; i++){
         const newCardContainer = document.createElement('div');
@@ -45,8 +49,10 @@ function generateQuestion(){
         newCardContainer.appendChild(newCardContainerImg);
         cardList.appendChild(newCardContainer);
 
-        cardSlider.appendSlide(`<div class="swiper-slide"><img class="card" src="icons/cards/${questionArray[i]}.svg" alt="" draggable="false"></div>`);
+        cardSlider.virtual.slides.push(`<div class="swiper-slide"><img class="card" src="icons/cards/${questionArray[i]}.svg" alt="" draggable="false"></div>`);
     }
+
+    cardSlider.virtual.update(true);
 
     cardIndex.innerText = `1/${cardNumber}`;
 }
