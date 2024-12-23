@@ -79,7 +79,7 @@ function generateQuestion(){
 
     pickupArea.appendChild(newPickupCard);
 
-    pickupCard = pickupArea.querySelector('.card');
+    pickupCard = newPickupCard;
     
     changePickupCard();
 
