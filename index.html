@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   
 <head>
   <meta charset="utf-8">
@@ -28,15 +28,17 @@
     <div class="app-content">
       <div class="content content-question content-show">
         <div class="card-list"></div>
-        <div class="pickup-area"></div>
+        <div class="pickup-area">
+          <img class="card" src="" alt="" draggable="false">
+        </div>
         <div class="control-area">
-          <button class="firstback_button" onclick="firstback()">
+          <button class="firstback-button">
             <img src="icons/firstback.svg" alt="" draggable="false">
           </button>
-          <button class="previous_button" onclick="perevious()">
+          <button class="previous-button">
             <img src="icons/triangle.svg" alt="" draggable="false">
           </button>
-          <button class="next_button" onclick="next()">
+          <button class="next-button">
             <img src="icons/triangle.svg" alt="" draggable="false">
           </button>
         </div>
@@ -45,7 +47,8 @@
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="src/cards.js"></script>
+  <script src="src/deck.js"></script>
+  <script src="src/main.js"></script>
   <!-- <script type="text/javascript" src="src/cards.js"></script> -->
   <!-- <script>
     if ('serviceWorker' in navigator) {
