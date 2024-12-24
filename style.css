@@ -8,6 +8,7 @@ html,body {
   overflow: hidden;
   user-select: none;
   -webkit-user-select: none;
+  touch-action: manipulation;
   box-sizing: border-box;
 }
   
@@ -235,18 +236,18 @@ html,body {
   box-sizing: border-box;
 }
 
-.firstback_button{
+.firstback-button{
   padding: 0;
 }
 
-.previous_button{
+.previous-button{
   padding: 0 4px 0 0;
 }
 
-.previous_button img{
+.previous-button img{
   transform: rotate(180deg);
 }
 
-.next_button{
+.next-button{
   padding: 0 0 0 4px;
 }
